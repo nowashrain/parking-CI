@@ -1,0 +1,8 @@
+#admintext {
+    font-size: 2rem; /* 글씨 크기 조정 */
+    font-weight: 600; /* 글씨 두께 조정 */
+    color: #444242; /* 글씨 색상 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 그림자 추가 */
+}
+

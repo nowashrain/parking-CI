@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>관리자 페이지</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/admin/index.css"> <!-- 커스텀 CSS 파일 -->
+  <link rel="stylesheet" href="/css/admin/parking.css">
+
+</head>
+<body class="bg-light">
+
+<!-- Header -->
+<header id="header">
+  <h1 id="admintext" class="text-center" style="font-size: 2rem; font-weight: bold; color: #434141;">관리자 페이지</h1>
+  <nav class="navbar navbar-expand-sm" style="background-color: #343a40; border: 1px solid #ccc;">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link text-center" href="/admin">방문차량 조회</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center" href="/admin/parking">주차차량 조회</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center" href="/admin/payment">결제 내역 조회</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center" href="/admin/statistics">통계 및 분석</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+
+<!-- Main Content -->
+<main class="container mt-4">
+  <div class="container mt-5">
+    <div class="d-flex justify-content-start">
+      <a href="/admin/parking" class="btn btn-primary mr-2"> 그림 조회</a>
+      <a href="/admin/parkingspots" class="btn btn-secondary">목록 조회</a>
+    </div>
+  </div>
+  <h3 class="text-center">주차차량 조회</h3>
+  <div class="ml-5">
+    <div id="available-spots"></div>
+  </div>
+  <div id="parking-areas" class="d-flex flex-wrap justify-content-center mt-4">
+    <div class="parking-area" id="A-area">
+      <h4>A구역</h4>
+      <div class="parking-spots" id="A-parking-spots"></div>
+    </div>
+    <div class="parking-area" id="B-area">
+      <h4>B구역</h4>
+      <div class="parking-spots" id="B-parking-spots"></div>
+    </div>
+    <div class="parking-area" id="C-area">
+      <h4>C구역</h4>
+      <div class="parking-spots" id="C-parking-spots"></div>
+    </div>
+    <div class="parking-area" id="D-area">
+      <h4>D구역</h4>
+      <div class="parking-spots" id="D-parking-spots"></div>
+    </div>
+    <div class="parking-area" id="E-area">
+      <h4>E구역</h4>
+      <div class="parking-spots" id="E-parking-spots"></div>
+    </div>
+<!--    <div class="parking-area" id="F-area">-->
+<!--      <h4>F구역 (장애인)</h4>-->
+<!--      <div class="disabled-parking-spots" id="F-disabled-parking-spots"></div> &lt;!&ndash; 장애인 주차 구역 &ndash;&gt;-->
+<!--    </div>-->
+  </div>
+</main>
+
+
+<!-- Footer -->
+<!--<div id="footer"></div>-->
+<footer class="bg-light text-center py-3">
+  <p>&copy; 2024 관리자 페이지. 모든 권리 보유.</p>
+</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/js/admin/parking.js"></script>
+
+</body>
+</html>

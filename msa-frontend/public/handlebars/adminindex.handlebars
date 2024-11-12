@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/admin/index.css"> <!-- 커스텀 CSS 파일 -->
+</head>
+<body class="bg-light">
+
+<!-- Header -->
+<header id="header">
+    <h1 id="admintext" class="text-center" style="font-size: 2rem; font-weight: bold; color: #434141;">관리자 페이지</h1>
+    <nav class="navbar navbar-expand-sm" style="background-color: #343a40; border: 1px solid #ccc;">
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="/admin">방문차량 조회</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="/admin/parking">주차차량 조회</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="/admin/payment">결제 내역 조회</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="/admin/statistics">통계 및 분석</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+
+<!-- Main Content -->
+<main class="container mt-4">
+    <h3 class="text-center">방문차량 조회</h3>
+    <table class="table table-bordered mt-4 text-center">
+        <thead class="thead-light">
+        <tr>
+            <th>차량 번호</th>
+            <th>입차 시간</th>
+            <th>출차 시간</th>
+        </tr>
+        </thead>
+        <tbody id="visitedtbody">
+        </tbody>
+    </table>
+</main>
+
+<!-- Footer -->
+<!--<div id="footer"></div>-->
+<footer class="bg-light text-center py-3">
+    <p>&copy; 2024 관리자 페이지. 모든 권리 보유.</p>
+</footer>
+
+<script>
+    sessionStorage.setItem('registerURL', '{{registerURL}}');
+    sessionStorage.setItem('paymentURL', '{{paymentURL}}');
+    sessionStorage.setItem('productURL', '{{productURL}}');
+    sessionStorage.setItem('statisticsURL', '{{statisticsURL}}');
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/js/admin/index.js"></script>
+</body>
+</html>

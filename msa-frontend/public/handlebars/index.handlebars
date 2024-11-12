@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>차량 등록 페이지 handlebars</title>
+  <link rel="stylesheet" href="/css/visitor/index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container button-container">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">차량 관리</h5>
+        <a href="/register" class="btn btn-success btn-lg m-2">입차</a>
+        <a href="/leaving" class="btn btn-danger btn-lg m-2">출차</a>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+    sessionStorage.setItem('registerURL', '{{registerURL}}');
+    sessionStorage.setItem('paymentURL', '{{paymentURL}}');
+    sessionStorage.setItem('productURL', '{{productURL}}');
+    sessionStorage.setItem('statisticsURL', '{{statisticsURL}}');
+</script>
+
+<!--<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="/js/visitor/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.fixed-navbar {
+  height: 60px; /* 높이 설정 */
+  width: 100%; /* 또는 원하는 픽셀 수치 */
+  position: fixed; /* 스크롤 시 위치 고정 (원하는 경우) */
+}
+
+
+.navbar {
+  margin-bottom: 20px; /* 내비게이션 바와 내용 사이 여백 */
+  border-radius: 0; /* 모서리 둥글기 제거 */
+}
+
+.nav-link {
+  color: white; /* 텍스트 색상 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+.nav-link:hover {
+  color: #f8f9fa; /* 호버 시 색상 */
+}
+
+.nav-item {
+  flex: 2; /* 각 nav-item의 크기를 동일하게 만듭니다. */
+  margin: 0 20px;
+}
+
+.navbar-nav {
+  justify-content: center; /* 메뉴를 가운데 정렬합니다. */
+  margin: 0 20px;
+}
+
+.navbar-nav .nav-link {
+  display: inline-block; /* 인라인 블록으로 변경하여 넓이 조절 가능 */
+  width: 150px; /* 원하는 너비 설정 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+
+
