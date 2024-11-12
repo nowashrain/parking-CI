@@ -113,7 +113,8 @@ pipeline {
                 dir('parking-CI') {
                     withCredentials([usernamePassword(credentialsId: 'github_token', usernameVariable: 'GIT_CREDENTIALS_USR', passwordVariable: 'GIT_CREDENTIALS_PSW')]) {
                         sh '''
-                            git push https://${GIT_CREDENTIALS_USR}:${GIT_CREDENTIALS_PSW}@github.com/${REPO_URL} main
+                            git push https://${GIT_CREDENTIALS_USR}:${GIT_CREDENTIALS_PSW}@${REPO_URL} main
+
                         '''
                     }
                 }
