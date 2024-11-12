@@ -80,7 +80,7 @@ pipeline {
             steps {
                 sh '''
                 rm -rf parking-CI
-                git clone https://github.com/${REPO_URL}
+                git clone ${REPO_URL}
                 '''
             }
         }
