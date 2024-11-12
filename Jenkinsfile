@@ -6,7 +6,7 @@ pipeline {
         DOCKER_BUILD_TAG = "v${env.BUILD_NUMBER}"
         DOCKER_PWD = credentials('dockerhub')
         GIT_CREDENTIALS = credentials('github_token')
-        REPO_URL = 'nowashrain/parking-CI.git'
+        REPO_URL = 'https://github.com/nowashrain/parking-CI.git'
         COMMIT_MESSAGE = 'Update README.md via Jenkins Pipeline'
     }
 
@@ -97,7 +97,7 @@ pipeline {
 
         stage('Commit Changes') {
             steps {
-                dir('hello-msa-cd') {
+                dir('parking-CI') {
                 sh '''
                     git config user.name "gongbu22"
                     git config user.email "pyujin0711@naver.com"
@@ -110,10 +110,12 @@ pipeline {
 
         stage('Push Changes') {
             steps {
-                dir('hello-msa-cd') {
-                sh '''
-                    git push https://${GIT_CREDENTIALS_USR}:${GIT_CREDENTIALS_PSW}@github.com/${REPO_URL} main
-                '''
+                dir('parking-CI') {
+                    withCredentials([usernamePassword(credentialsId: 'github_token', usernameVariable: 'GIT_CREDENTIALS_USR', passwordVariable: 'GIT_CREDENTIALS_PSW')]) {
+                        sh '''
+                            git push https://${GIT_CREDENTIALS_USR}:${GIT_CREDENTIALS_PSW}@github.com/${REPO_URL} main
+                        '''
+                    }
                 }
             }
         }
