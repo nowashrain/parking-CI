@@ -22,9 +22,9 @@ pipeline {
 
         stage('Docker Image Building') {
             steps {
+                dir('parking-CI')
                 {
                 sh '''
-                cd parking-CI
                 docker build -t ${DOCKER_IMAGE_OWNER}/msa-frontend-nginx:latest -t ${DOCKER_IMAGE_OWNER}/msa-frontend-nginx:${DOCKER_BUILD_TAG} -f ./msa-frontend/nginx-Dockerfile ./msa-frontend
                 docker tag ${DOCKER_IMAGE_OWNER}/msa-frontend-nginx:latest ${DOCKER_IMAGE_OWNER}/msa-frontend-nginx:${DOCKER_BUILD_TAG}
                 docker build -t ${DOCKER_IMAGE_OWNER}/msa-frontend-nodejs:latest -t ${DOCKER_IMAGE_OWNER}/msa-frontend-nodejs:${DOCKER_BUILD_TAG} -f ./msa-frontend/nodejs-Dockerfile ./msa-frontend
